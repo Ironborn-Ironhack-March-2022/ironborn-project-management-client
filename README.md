@@ -12,11 +12,11 @@ Server can be found here: https://github.com/Ironborn-Ironhack-March-2022/ironbo
 - [x] Display list of projects <ProjectListPage />
 - [ ] Display details of one project <ProjectDetailsPage />
 - [x] Create new project <AddProjectPage />
-  - [ ] Fix: after creating a project, list of projects needs to be updated
-- [ ] Update project <EditProjectPage />
-  - [ ] Fix: after creating a project, list of projects needs to be updated
-  - [ ] Fix: form field `description` is not pre-populated
-- [ ] Delete project
+  - [x] Fix: after creating a project, list of projects needs to be updated
+- [x] Update project <EditProjectPage />
+  - [x] Fix: after creating a project, list of projects needs to be updated
+  - [x] Fix: form field `description` is not pre-populated
+- [x] Delete project
 
 - [ ] Functionality on tasks (ex. create tasks, display list of tasks)
 

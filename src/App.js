@@ -29,9 +29,9 @@ function App() {
 
       <Routes>
         <Route path='/' element={<h1>Welcome</h1>} />
-        <Route path='/projects' element={<ProjectListPage projects={projects} />} />
+        <Route path='/projects' element={<ProjectListPage projects={projects} callbackUpdateProjectList={fetchProjects} />} />
         <Route path='/projects/create' element={<AddProjectPage callbackUpdateProjectList={fetchProjects} />} />
-        <Route path='/projects/:projectId/edit' element={<EditProjectPage projects={projects} />} />
+        <Route path='/projects/:projectId/edit' element={<EditProjectPage projects={projects} callbackUpdateProjectList={fetchProjects} />} />
       </Routes>
     </div>
   );
