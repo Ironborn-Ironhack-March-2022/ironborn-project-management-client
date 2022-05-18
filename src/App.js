@@ -6,6 +6,8 @@ import ProjectListPage from './pages/ProjectListPage';
 import { useEffect, useState } from "react";
 import AddProjectPage from "./pages/AddProjectPage";
 import EditProjectPage from "./pages/EditProjectPage";
+import SignupPage from "./pages/SignupPage";
+import LoginPage from "./pages/LoginPage";
 
 function App() {
 
@@ -32,6 +34,9 @@ function App() {
         <Route path='/projects' element={<ProjectListPage projects={projects} callbackUpdateProjectList={fetchProjects} />} />
         <Route path='/projects/create' element={<AddProjectPage callbackUpdateProjectList={fetchProjects} />} />
         <Route path='/projects/:projectId/edit' element={<EditProjectPage projects={projects} callbackUpdateProjectList={fetchProjects} />} />
+
+        <Route path='/signup' element={<SignupPage />} />
+        <Route path='/login' element={<LoginPage />} />
       </Routes>
     </div>
   );
