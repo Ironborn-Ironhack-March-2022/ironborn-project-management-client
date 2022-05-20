@@ -8,6 +8,7 @@ import AddProjectPage from "./pages/AddProjectPage";
 import EditProjectPage from "./pages/EditProjectPage";
 import SignupPage from "./pages/SignupPage";
 import LoginPage from "./pages/LoginPage";
+import IsPrivate from "./components/IsPrivate";
 
 function App() {
 
@@ -32,8 +33,22 @@ function App() {
       <Routes>
         <Route path='/' element={<h1>Welcome</h1>} />
         <Route path='/projects' element={<ProjectListPage projects={projects} callbackUpdateProjectList={fetchProjects} />} />
-        <Route path='/projects/create' element={<AddProjectPage callbackUpdateProjectList={fetchProjects} />} />
-        <Route path='/projects/:projectId/edit' element={<EditProjectPage projects={projects} callbackUpdateProjectList={fetchProjects} />} />
+        <Route 
+          path='/projects/create' 
+          element={
+            <IsPrivate>
+              <AddProjectPage callbackUpdateProjectList={fetchProjects} />
+            </IsPrivate>
+          } 
+        />
+        <Route 
+          path='/projects/:projectId/edit' 
+          element={
+            <IsPrivate>
+              <EditProjectPage projects={projects} callbackUpdateProjectList={fetchProjects} />
+            </IsPrivate>
+          } 
+        />
 
         <Route path='/signup' element={<SignupPage />} />
         <Route path='/login' element={<LoginPage />} />
